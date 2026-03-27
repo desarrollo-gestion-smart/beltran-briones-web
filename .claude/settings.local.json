@@ -1,21 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:beltranbriones.com)",
-      "Bash(curl -s \"https://beltranbriones.com/\")",
-      "Bash(grep -oE '>[^<]{20,}[^<]*<')",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --no-turbopack)",
-      "Bash(printf \"n\\\\nn\\\\n\")",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git --no-turbopack --yes)",
-      "Bash(npm run:*)",
-      "WebFetch(domain:grupobriones.com.ar)",
-      "Bash(curl -s https://grupobriones.com.ar/proyectos/brigos-nunez)",
-      "Bash(grep -oP 'ctfassets\\\\.net[^\"\"\"\"''''\\\\\\\\]+')",
-      "Bash(grep -oE 'https://images\\\\.ctfassets\\\\.net/[^\"\"\"\"& \\\\\\\\]+')",
-      "Bash(grep -oE 'brigos[^\"\"\"\"& \\\\\\\\]*\\\\.\\(jpg|jpeg|png|webp\\)')",
-      "Bash(grep -oE 'ctfassets[^%\"\"\"\"\\\\\\\\]+')",
-      "Bash(ls:*)"
+      "WebFetch(domain:github.com)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/minimalist-skill/SKILL.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/brutalist-skill/SKILL.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/redesign-skill/SKILL.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/output-skill/SKILL.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/stitch-skill/SKILL.md\")",
+      "Bash(curl -s \"https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/stitch-skill/DESIGN.md\")"
     ]
   }
 }
