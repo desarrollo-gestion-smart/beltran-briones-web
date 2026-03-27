@@ -71,7 +71,7 @@ export default function Nav() {
             {/* Mobile menu toggle */}
             <button
               onClick={() => setOpen(!open)}
-              className="md:hidden p-2 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors"
+              className="md:hidden p-2 rounded-xl text-white/80 hover:bg-white/10 transition-colors"
               aria-label="Toggle menu"
             >
               {open ? <X size={20} /> : <Menu size={20} />}

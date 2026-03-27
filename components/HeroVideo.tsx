@@ -179,7 +179,7 @@ export default function HeroVideo() {
         {/* Tagline */}
         <p
           ref={taglineRef}
-          className="text-base sm:text-lg text-white/65 max-w-[560px] mb-12 font-light leading-relaxed"
+          className="text-base sm:text-lg text-white/65 max-w-[560px] mb-8 sm:mb-12 font-light leading-relaxed"
         >
           Cofundador del{' '}
           <strong className="text-white font-semibold">Grupo Briones</strong>,
@@ -190,13 +190,13 @@ export default function HeroVideo() {
         {/* Stats grid */}
         <div
           ref={statsRef}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden max-w-2xl w-full mb-10"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden max-w-2xl w-full mb-6 sm:mb-10"
         >
           {STATS.map((s, i) => (
-            <div key={i} className="stat-cell bg-white/5 backdrop-blur-sm px-6 py-6">
+            <div key={i} className="stat-cell bg-white/5 backdrop-blur-sm px-3 py-4 sm:px-6 sm:py-6">
               <p
                 data-stat={i}
-                className="text-2xl sm:text-3xl font-black text-white leading-none mb-1"
+                className="text-xl sm:text-3xl font-black text-white leading-none mb-1"
               >
                 {s.text ?? `0${s.suffix}`}
               </p>
@@ -208,7 +208,7 @@ export default function HeroVideo() {
         </div>
 
         {/* CTAs */}
-        <div ref={ctasRef} className="flex flex-col sm:flex-row gap-3">
+        <div ref={ctasRef} className="flex flex-col sm:flex-row gap-3 w-full max-w-xs sm:max-w-none sm:w-auto">
           <a
             href="#proyectos"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-brand-700 font-bold text-sm rounded-xl hover:bg-brand-50 active:scale-[0.97] transition-all duration-200 shadow-lg"
