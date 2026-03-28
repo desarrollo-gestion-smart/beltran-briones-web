@@ -11,6 +11,7 @@ import Book3D from '@/components/Book3D'
 import Reveal from '@/components/Reveal'
 import HeroVideo from '@/components/HeroVideo'
 import ProcessSection from '@/components/ProcessSection'
+import Testimonials from '@/components/Testimonials'
 
 const ML_URL       = 'https://www.mercadolibre.com.ar/libro-el-metodo-briones--beltran-briones/up/MLAU3759673539'
 const PHONE        = '+54 911 2468 2070'
@@ -56,17 +57,17 @@ function Referente() {
                 href={ML_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-6 left-2 sm:-left-5 bg-white rounded-xl border border-slate-100 shadow-lg px-4 py-3 max-w-[168px] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group"
+                className="absolute top-4 left-2 sm:top-6 sm:-left-5 bg-white rounded-xl border border-slate-100 shadow-lg px-3 py-2 sm:px-4 sm:py-3 max-w-[130px] sm:max-w-[168px] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group"
               >
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-6 h-6 bg-brand-700 rounded-full flex items-center justify-center shrink-0">
-                    <ShoppingCart size={10} className="text-white" />
+                <div className="flex items-center gap-1.5 mb-1.5 sm:mb-2">
+                  <div className="w-5 h-5 sm:w-6 sm:h-6 bg-brand-700 rounded-full flex items-center justify-center shrink-0">
+                    <ShoppingCart size={9} className="text-white" />
                   </div>
-                  <p className="text-[10px] font-bold text-brand-700 uppercase tracking-wide leading-tight">Best Seller</p>
+                  <p className="text-[9px] sm:text-[10px] font-bold text-brand-700 uppercase tracking-wide leading-tight">Best Seller</p>
                 </div>
-                <p className="text-xs font-black text-slate-900 leading-tight mb-0.5">El Método Briones</p>
-                <p className="text-[10px] text-slate-400 leading-snug">#1 en ventas · Penguin Random House</p>
-                <p className="mt-2 text-[10px] font-bold text-brand-700 uppercase tracking-wide group-hover:underline">
+                <p className="text-[11px] sm:text-xs font-black text-slate-900 leading-tight mb-0.5">El Método Briones</p>
+                <p className="text-[9px] sm:text-[10px] text-slate-400 leading-snug">#1 en ventas · Penguin</p>
+                <p className="mt-1.5 sm:mt-2 text-[9px] sm:text-[10px] font-bold text-brand-700 uppercase tracking-wide group-hover:underline">
                   Comprar →
                 </p>
               </a>
@@ -408,6 +409,7 @@ export default function Page() {
         <HeroVideo />
         <ProcessSection />
         <Referente />
+        <Testimonials />
         <BookSection />
         <Contact />
       </main>

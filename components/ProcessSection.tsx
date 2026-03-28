@@ -40,56 +40,97 @@ export default function ProcessSection() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia()
 
-      /* ── Line draws left → right on scroll ─────────────── */
-      gsap.fromTo(
-        lineRef.current,
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 65%',
-            end:   'top 20%',
-            scrub: 0.6,
-          },
-        }
-      )
+      /* ── Desktop ──────────────────────────────────────────── */
+      mm.add('(min-width: 768px)', () => {
+        gsap.fromTo(
+          lineRef.current,
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 65%',
+              end:   'top 20%',
+              scrub: 0.6,
+            },
+          }
+        )
 
-      /* ── Nodes: scale pop + fade ────────────────────────── */
-      gsap.fromTo(
-        '.process-node',
-        { scale: 0, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          stagger: 0.12,
-          duration: 0.5,
-          ease: 'back.out(1.8)',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 60%',
-          },
-        }
-      )
+        gsap.fromTo(
+          '.process-node',
+          { scale: 0, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.5,
+            ease: 'back.out(1.8)',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 60%',
+            },
+          }
+        )
 
-      /* ── Step text: slide up ────────────────────────────── */
-      gsap.fromTo(
-        '.process-text',
-        { opacity: 0, y: 22 },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.12,
-          duration: 0.55,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 55%',
-          },
-        }
-      )
+        gsap.fromTo(
+          '.process-text',
+          { opacity: 0, y: 22 },
+          {
+            opacity: 1,
+            y: 0,
+            stagger: 0.12,
+            duration: 0.55,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 55%',
+            },
+          }
+        )
+      })
+
+      /* ── Mobile: cada item se anima cuando entra al viewport ─ */
+      mm.add('(max-width: 767px)', () => {
+        const nodes = sectionRef.current!.querySelectorAll('.process-node')
+        const texts = sectionRef.current!.querySelectorAll('.process-text')
+
+        nodes.forEach((node) => {
+          gsap.fromTo(
+            node,
+            { scale: 0, opacity: 0 },
+            {
+              scale: 1,
+              opacity: 1,
+              duration: 0.45,
+              ease: 'back.out(1.8)',
+              scrollTrigger: {
+                trigger: node,
+                start: 'top 90%',
+              },
+            }
+          )
+        })
+
+        texts.forEach((text) => {
+          gsap.fromTo(
+            text,
+            { opacity: 0, x: 16 },
+            {
+              opacity: 1,
+              x: 0,
+              duration: 0.45,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: text,
+                start: 'top 92%',
+              },
+            }
+          )
+        })
+      })
 
     }, sectionRef)
 

@@ -158,7 +158,7 @@ export default function HeroVideo() {
       />
 
       {/* ── Content ───────────────────────────────────────── */}
-      <div className="relative h-full flex flex-col justify-center items-center text-center px-6 pt-20">
+      <div className="relative h-full flex flex-col justify-center items-center text-center px-6 pt-20 pb-16">
 
         {/* Eyebrow line */}
         <div
